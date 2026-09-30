@@ -1,0 +1,783 @@
+:root{
+  --header-bg: #F3FDFF;
+  --nav-bg: #D7E9FB;
+  --pill: #84C8FF;
+  --text: #1b1b1b;
+  --max: 1100px;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  background: #fff;
+}
+
+/* Gemensam inner-container */
+.inner{
+  width: 100%;
+  padding: 0 40px;
+}
+
+/* HEADER */
+.site-header{
+  background: var(--header-bg);
+}
+
+/* TOPPDEL */
+.topbar .inner{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+  padding: 10px 40px;
+}
+
+.logo-link{
+  justify-self: start;
+}
+
+.logo{
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.brand{
+  justify-self: start;
+  margin-left: 14px;
+}
+
+.site-title{
+  margin: 0;
+  color: #555;
+  line-height: 1;
+  position: relative;
+}
+
+
+.search-pill{
+  border: 0;
+  background: var(--pill);
+  border-radius: 999px;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font: inherit;
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+}
+
+.title-top{
+  display: inline-block;
+  position: relative;
+  font-size: 34px;
+  padding-bottom: 5px;
+}
+
+.title-top::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #555;
+}
+
+.title-bottom{
+  display: block;
+  font-size: 28px;
+  margin-left: 80px;
+  margin-top: 3px;
+}
+
+.site-search{
+  justify-self: end;
+}
+
+.search-text{ font-size: 14px; }
+.search-icon{ font-size: 14px; }
+
+/* MENYRAD (fullbredd blå bakgrund) */
+.site-nav{
+  background: var(--nav-bg);
+}
+
+/* Dropdown under Om oss */
+.dropdown{
+  position: relative;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--nav-bg);
+  min-width: 130px;
+  z-index: 1000;
+}
+
+.dropdown-menu li{
+  width: 100%;
+}
+
+.dropdown-menu a{
+  display: block;
+  padding: 7px 12px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.dropdown-menu a:hover{
+  background-color: #bdddf8;
+}
+
+/* Visa menyn när musen är över Om oss */
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+
+.nav-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 22px;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.site-nav a{
+  color: #1b1b1b;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.site-nav a:hover{
+  text-decoration: underline;
+}
+
+/* Hamburger (höger) */
+.menu-btn{
+  width: 36px;
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--pill);
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-btn span{
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: #1b1b1b;
+  border-radius: 2px;
+}
+
+/* Innehåll */
+
+.page{
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 40px;
+}
+
+.page-title{
+  text-align: center;
+  font-size: 44px;
+  margin: 10px 0 16px;
+  text-decoration: underline;
+}
+
+.page p {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.main-image{
+  display: block;
+  width: 530px;
+  max-width: 100%;
+  height: auto;
+  margin: 50px 0 40px 0;
+  border-radius: 20px;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 40px;
+  width: 100%;
+  margin-top: 40px;
+  align-items: start;
+}
+
+.info-text {
+  width: 100%;
+}
+
+.info-text p {
+  width: 100%;
+  margin: 0;
+}
+
+.small-dog-image {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  justify-self: end;
+  margin-top: 40px;
+}
+
+
+
+.news {
+  margin-top: 30px;
+  width: 500px;
+  height: 260px;
+  background-color: #cbe7ff;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.site-footer {
+  background-color: #cbe7ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer-column p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.gallery img,
+.gallery-video {
+  display: block;
+  width: 70%;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 70%;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Texten ovanpå bilden */
+.image-info {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* När musen är över bilden */
+.gallery-item:hover .image-info {
+  opacity: 1;
+}
+
+.dog-profile-image {
+  display: block;
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  margin: 40px auto;
+}
+
+.dog-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.dog-facts p {
+  margin: 3px 0;
+}
+
+.dog-merits {
+  margin: 0;
+}
+
+.dog-description {
+  max-width: 600px;
+  margin: 30px auto !important;
+}
+
+.pedigree-link {
+  max-width: 600px;
+  margin: 70px auto !important;
+  font-size: 24px;
+}
+
+.history-page {
+  max-width: 900px;
+  margin: 24px auto;
+}
+
+.history-top {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.history-text h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.history-text p {
+  margin-bottom: 30px;
+}
+
+.history-side {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.history-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.facts-box {
+  background-color: #cbe7ff;
+  padding: 15px;
+  border: 1px solid #777;
+}
+
+.facts-box h3 {
+  margin-top: 0;
+}
+
+.history-bottom {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.history-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-images img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.history-long-text {
+  border-left: 2px solid #777;
+  padding-left: 30px;
+}
+
+/* HISTORIK - gör sidan mer lik mockupen */
+
+.history-page {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.history-page .page-title {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.history-top {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 20px;
+  align-items: start;
+}
+
+.history-text h3 {
+  font-size: 16px;
+  margin: 0 0 4px 0;
+}
+
+.history-text p {
+  font-size: 14px;
+  line-height: 1.25;
+  margin: 0 0 25px 0;
+}
+
+.history-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-image {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.facts-box {
+  width: 220px;
+  background-color: #cbe7ff;
+  border: 1px solid #777;
+  padding: 10px;
+  font-size: 13px;
+  margin-top: 50px;
+}
+
+.facts-box h3 {
+  font-size: 15px;
+  margin: 0 0 8px 0;
+}
+
+.facts-box p {
+  margin: 5px 0;
+}
+
+.facts-box ul {
+  margin: 5px 0 10px 15px;
+  padding-left: 10px;
+}
+
+.contact-page {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 30px;
+}
+
+.contact-box {
+  width: 650px;
+  max-width: 100%;
+  margin: 50px auto 0;
+  padding: 30px;
+  background-color: #cbe7ff;
+  text-align: center;
+}
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.contact-item h3 {
+  margin: 0 0 5px;
+}
+
+.contact-item p {
+  margin: 2px 0;
+}
+
+.contact-image {
+  display: block;
+  width: 360px;
+  max-width: 90%;
+  height: auto;
+  margin: -25px auto 70px;
+}
+
+@media (max-width: 700px) {
+
+  .topbar .inner {
+    grid-template-columns: auto 1fr auto;
+    padding: 10px 15px;
+  }
+
+  .title-top {
+    font-size: 24px;
+  }
+
+  .title-bottom {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .page {
+    padding: 0 15px;
+  }
+
+  .main-image {
+    width: 100%;
+  }
+
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .small-dog-image {
+    justify-self: center;
+    width: 250px;
+    height: 300px;
+  }
+
+  .news {
+    width: 100%;
+  }
+
+  .gallery img,
+  .gallery-video {
+    width: 100%;
+  }
+
+  .history-top {
+    grid-template-columns: 1fr;
+  }
+
+  .history-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .facts-box {
+    width: 100%;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media print {
+
+  /* Ta bort sådant som inte behövs på papper */
+  .site-header {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    background: white;
+    color: black;
+  }
+
+  .contact-page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 30px;
+    margin: 0 0 25px;
+  }
+
+  .contact-box {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #999;
+  }
+
+  .contact-item {
+    margin-bottom: 15px;
+  }
+
+  .contact-image {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  /* Footern kompakt så den får plats på samma sida */
+  .site-footer {
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    background: white;
+    border-top: 1px solid #999;
+    font-size: 11px;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .footer-column p {
+    font-size: 11px;
+    margin: 1px 0;
+  }
+}
+}
+@media print {
+
+  .site-header,
+  .site-footer {
+    display: none !important;
+  }
+
+  body {
+    margin: 0 !important;
+    background: white !important;
+  }
+
+  .contact-page {
+    width: 100% !important;
+    max-width: 650px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+
+  .contact-box {
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 20px auto !important;
+    padding: 20px !important;
+      background-color: #cbe7ff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    border: 1px solid black;
+  }
+
+  .contact-image {
+  display: block;
+  width: 350px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: -40px auto 20px !important;
+}
+
+  .page-title {
+    font-size: 30px !important;
+    margin: 10px 0 20px !important;
+  }
+}
+
+.traits-section {
+  margin-left: 0;
+  margin-top: 40px;
+}
+
+.traits-section h3 {
+  margin-bottom: 10px;
+}
+
+.traits-section ul {
+  margin-top: 0;
+}
+
+.dog-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.dog-table th,
+.dog-table td {
+  border: 1px solid #888;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.dog-table th {
+  background-color: #cbe7ff;
+}
+
+.contact-form-section {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.contact-form-section h3 {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.contact-form button {
+  width: 120px;
+  padding: 10px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 8px;
+  background-color: #84C8FF;
+
+  font: inherit;
+  cursor: pointer;
+}
+
