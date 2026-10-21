@@ -781,3 +781,8 @@ body{
   cursor: pointer;
 }
 
+@media print {
+    .contact-form-section {
+        display: none !important;
+    }
+}
