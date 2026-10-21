@@ -672,6 +672,10 @@ body{
 }
 @media print {
 
+  .contact-form-section {
+    display: none !important;
+ }
+
   .site-header,
   .site-footer {
     display: none !important;
